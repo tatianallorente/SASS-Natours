@@ -2,7 +2,7 @@
 
 >Web SPA desarrollada con el preprocesador de CSS: *SASS*. \
 >Usando la sintaxis *SCSS*. \
->Unidad de medida en *rem* y para las media queries *em*.
+>Unidad de medida en *rem* y para las media queries *em*. \
 >Web realizada durante el curso *Advanced CSS and Sass*. 
 ---
 
