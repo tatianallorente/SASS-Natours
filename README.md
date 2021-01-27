@@ -3,7 +3,7 @@
 >Web SPA desarrollada con el preprocesador de CSS: *SASS*. \
 >Usando la sintaxis *SCSS*. \
 >Unidad de medida en *rem* y para las media queries *em*. \
->Web realizada durante el curso *Advanced CSS and Sass*. \
+>Web realizada durante el curso *Advanced CSS and Sass*.
 
 
 Web desplegada en: ![GitHub Pages](https://img.shields.io/badge/-181717?style=flat&logo=GitHub&logoColor=white) [SASS_Natours](https://tatianallorente.github.io/SASS-Natours/)
