@@ -1,0 +1,79 @@
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERIES
+
+/*
+@mixin respod-phone {
+    @media (max-width: 600px) {
+        // directiva content
+        @content; // aqui constará todo lo que escribamos dentro del mixin respond-phone
+    }
+}
+*/
+
+/*
+0px    - 600px:  Phone
+600px  - 900px : Tablet portrait
+900px  - 1200px: Tablet Landscape
+1200px - 1800px: Normal styles
+1800px + :       Big desktop
+*/
+
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+/*
+En las media queries, usar rem o em, ambas dependen solamente del tamaño de fuente del navegador (16px default)
+Los ems son la mejor opción para las media queries.
+
+1em = 16px
+*/
+
+// ORDER: Base + tipography > general layout + grid > page layout > components
+
+@mixin respond($breakpoint) {
+    // directiva if
+    @if $breakpoint == phone {
+       // 600px
+        @media only screen and (max-width: 37.5em) {
+            @content;
+        }
+    }
+    @if $breakpoint == tab-port {
+        // 900px
+        @media only screen and (max-width: 56.25em) {
+            @content;
+        }
+    }
+    @if $breakpoint == tab-land {
+        // 1200px
+        @media only screen and (max-width: 75em) {
+            @content;
+        }
+    }
+    @if $breakpoint == big-desktop {
+        // 1800px
+        @media only screen and (min-width: 112.5em) {
+            @content;
+        }
+    }
+
+}

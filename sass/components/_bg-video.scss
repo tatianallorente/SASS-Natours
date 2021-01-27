@@ -1,0 +1,20 @@
+.bg-video {
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .15;
+    overflow: hidden;
+
+    /* esto es porque el video se sale de la página */
+    &__content {
+        height: 100%;
+        width: 100%;
+        /* se comporta como para las imágenes el background-size: cover */
+        /* ajusta el video manteniendo su aspect ratio */
+        object-fit: cover;
+    }
+
+}

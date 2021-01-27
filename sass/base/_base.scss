@@ -1,0 +1,57 @@
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; /* heredarán todos los elementos de lo que hemos puesto en el body */
+}
+
+html {
+    /*
+    font-size: 10px;
+    Esto es para que 1rem = 10px y sea fácil calcular todas las medidas
+    Ahora podemos cambiar todas las medidas de px a rem
+    Por ejemplo: padding:30px = padding 3rem
+    Gracias a esto nos ahorramos muchas media queries
+    */
+    /* 
+    Es mejor no poner el valor de la fuente en px porque si alguien
+    configura su navegador con otro tamaño de fuente, se lo pisamos.
+    Sabiendo que los navegadores ponen por defecto 16px, 
+    deberíamos poner nuestro tamaño de fuente en %
+    */
+    // Esto define lo que es 1 rem
+    // 1 rem = 10px
+    font-size: 62.5%; // 10px/16px = 62.5%
+
+    @include respond(tab-land) { // width < 900
+        font-size: 56.25%; // 1rem = 9px, 9/16 = 56.25%
+    }
+
+    @include respond(tab-port) { // width < 600
+        font-size: 50%; // 1rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; // 1rem = 12px, 12/16 = 75%
+    }
+
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+
+    @include respond(tab-port) {
+        padding: 0;
+    }
+
+}
+
+// Para cambiar el color cuando selecionamos un texto en la web
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
